@@ -1,4 +1,4 @@
-package practice.SpringBoot.topic;
+package com.springboot.topic;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TopicController {
 
 	@Autowired
-	private TopicService topicService;
+	TopicService topicService;
 
 	@RequestMapping("/topics")
 	public List<Topic> getAllTopics() {
@@ -32,7 +32,7 @@ public class TopicController {
 
 	@RequestMapping(method = RequestMethod.PUT, value = "/topics/{id}")
 	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
-		topicService.updateTopic(topic, id);
+		topicService.updateTopic(topic);
 	}
 
 	@RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
