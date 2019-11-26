@@ -107,7 +107,8 @@ public class MessageResource {
 	@POST
 	public Response addMessage(Message message, @Context UriInfo uriInfo) throws URISyntaxException {
 		// messageService.addMessage(message);
-		// Use resource builder to send proper msg status. We can build respose with all
+		// Use resource builder to send proper msg status. We can build response with
+		// all
 		// required values
 		Message createdMsg = messageService.addMessage(message);
 		// create new link of created msg

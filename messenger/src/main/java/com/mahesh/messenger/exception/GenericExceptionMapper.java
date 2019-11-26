@@ -3,7 +3,6 @@ package com.mahesh.messenger.exception;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.ext.ExceptionMapper;
-import javax.ws.rs.ext.Provider;
 
 import com.mahesh.messenger.model.ErrorMessage;
 
@@ -11,7 +10,7 @@ import com.mahesh.messenger.model.ErrorMessage;
 This is kind of generic exception handler to cath all types of errors,
 It is good to have all custom exection
 */
-@Provider
+//@Provider Commented or else this only catch all exceptions
 public class GenericExceptionMapper implements ExceptionMapper<Throwable> {
 
 	@Override
